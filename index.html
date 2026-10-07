@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Sahiba 🎀</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  min-height:100vh;overflow:hidden;font-family:"Trebuchet MS",Arial,sans-serif;
+  background:radial-gradient(circle at 20% 15%,#fff 0 3%,transparent 18%),linear-gradient(135deg,#ffd9e8,#ffb5d2 48%,#ffe9f3);
+  display:flex;align-items:center;justify-content:center;color:#7c2754;
+}
+body:before{content:"";position:fixed;inset:0;background:linear-gradient(120deg,transparent 35%,rgba(255,255,255,.28),transparent 65%);animation:shine 5s linear infinite;pointer-events:none}
+@keyframes shine{from{transform:translateX(-100%)}to{transform:translateX(100%)}}
+.container{
+  width:min(92vw,460px);max-height:94vh;overflow:auto;scrollbar-width:none;
+  padding:28px 24px 24px;border-radius:32px;text-align:center;position:relative;z-index:5;
+  background:rgba(255,255,255,.78);backdrop-filter:blur(12px);
+  box-shadow:0 20px 60px rgba(180,45,105,.25),inset 0 1px 0 rgba(255,255,255,.8);
+}
+.container::-webkit-scrollbar{display:none}
+h1{font-size:32px;color:#df347c;margin-bottom:8px;text-shadow:0 3px 12px rgba(223,52,124,.15)}
+.subtitle{font-size:15px;color:#a44c75;margin-bottom:12px}
+.teddy-wrap{height:205px;display:flex;align-items:center;justify-content:center;position:relative}
+.teddy-svg{width:210px;height:210px;animation:teddy 2s ease-in-out infinite;filter:drop-shadow(0 12px 10px rgba(150,70,100,.18))}
+@keyframes teddy{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-9px) rotate(1deg)}}
+.tip{font-size:15px;margin:2px 0 14px;color:#93466c}
+.custom-box{margin:0 auto 14px}
+#customMessage{width:100%;padding:14px 17px;border:2px solid #f08ab5;border-radius:28px;outline:none;background:#fff8fc;color:#7c2754;font:inherit;text-align:center;box-shadow:0 6px 18px rgba(220,70,130,.1)}
+#customMessage:focus{border-color:#df347c;box-shadow:0 0 0 4px rgba(223,52,124,.1)}
+#customMessage::placeholder{color:#c67a9d}
+.open-btn{border:0;padding:14px 48px;border-radius:999px;background:linear-gradient(135deg,#ff5aa2,#d82c76);color:#fff;font-size:20px;font-weight:800;cursor:pointer;box-shadow:0 10px 24px rgba(216,44,118,.3);animation:pulse 1.6s infinite;transition:.2s}
+.open-btn:hover{transform:translateY(-2px) scale(1.03)}
+@keyframes pulse{0%,100%{box-shadow:0 10px 24px rgba(216,44,118,.3)}50%{box-shadow:0 12px 32px rgba(216,44,118,.48)}}
+#birthday{display:none;animation:appear .8s ease forwards}
+@keyframes appear{from{opacity:0;transform:scale(.82) translateY(15px)}to{opacity:1;transform:scale(1) translateY(0)}}
+.gift-big{font-size:76px;animation:giftBounce 1.5s infinite;margin:5px}
+@keyframes giftBounce{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-10px) rotate(3deg)}}
+.chocolates{font-size:38px;margin:6px}
+.note{background:linear-gradient(145deg,#fff7fb,#fff0f7);border:2px dashed #ef79aa;border-radius:22px;padding:20px 17px;line-height:1.65;font-size:16px;box-shadow:0 8px 22px rgba(220,70,130,.1)}
+.highlight{color:#df2675;font-weight:900;font-size:20px}
+#displayMessage{color:#df2675;font-size:18px;font-weight:800;background:#fff;border-radius:16px;padding:12px;margin:4px 0;word-break:break-word;box-shadow:0 5px 14px rgba(220,70,130,.08)}
+.small{margin-top:12px;font-size:13px;color:#ad6485}
+.balloon,.heart{position:fixed;pointer-events:none;z-index:2}
+.balloon{bottom:-100px;font-size:52px;animation:floatUp linear infinite}
+.b1{left:4%;animation-duration:8s}.b2{left:21%;animation-duration:11s;animation-delay:2s}.b3{right:7%;animation-duration:9s;animation-delay:1s}.b4{right:22%;animation-duration:12s;animation-delay:3s}
+@keyframes floatUp{0%{transform:translateY(0) rotate(-8deg);opacity:0}15%{opacity:1}100%{transform:translateY(-120vh) rotate(12deg);opacity:0}}
+.heart{bottom:-35px;font-size:25px;animation:hearts 6s linear infinite}
+@keyframes hearts{from{transform:translateY(0) translateX(0);opacity:0}15%{opacity:1}to{transform:translateY(-115vh) translateX(80px);opacity:0}}
+.spark{position:fixed;font-size:18px;animation:spark 1.5s ease-out forwards;z-index:20;pointer-events:none}
+@keyframes spark{0%{opacity:1;transform:scale(.5) translate(0,0)}100%{opacity:0;transform:scale(1.3) translate(var(--x),var(--y))}}
+@media(max-height:700px){.container{padding-top:18px}.teddy-wrap{height:165px}.teddy-svg{width:170px;height:170px}h1{font-size:27px}}
+</style>
+</head>
+<body>
+
+<div class="balloon b1">🎈</div><div class="balloon b2">🎈</div><div class="balloon b3">🎈</div><div class="balloon b4">🎈</div>
+<div class="heart" style="left:9%;animation-delay:1s">💗</div>
+<div class="heart" style="left:31%;animation-delay:3s">💕</div>
+<div class="heart" style="left:68%;animation-delay:0s">💖</div>
+<div class="heart" style="left:90%;animation-delay:2s">💗</div>
+
+<!-- Put birthday-melody.mp3 in the same GitHub folder as this index.html -->
+<audio id="birthdayAudio" preload="auto">
+  <source src="birthday-melody.mp3" type="audio/mpeg">
+</audio>
+
+<div class="container">
+  <section id="welcome">
+    <h1>🎀 Happy Birthday 🎀</h1>
+    <div class="subtitle">A little surprise is waiting for you... 💗</div>
+
+    <!-- Detailed SVG teddy bear holding a gift -->
+    <div class="teddy-wrap">
+      <svg class="teddy-svg" viewBox="0 0 260 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Teddy bear holding a gift">
+        <defs>
+          <linearGradient id="fur" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#eab27d"/><stop offset="1" stop-color="#c98152"/></linearGradient>
+          <linearGradient id="box" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9fc5"/><stop offset="1" stop-color="#e94e91"/></linearGradient>
+        </defs>
+        <ellipse cx="130" cy="235" rx="72" ry="12" fill="#b95782" opacity=".15"/>
+        <circle cx="76" cy="67" r="28" fill="url(#fur)"/><circle cx="184" cy="67" r="28" fill="url(#fur)"/>
+        <circle cx="130" cy="105" r="67" fill="url(#fur)"/>
+        <ellipse cx="130" cy="142" rx="50" ry="65" fill="url(#fur)"/>
+        <circle cx="106" cy="101" r="7" fill="#3b2530"/><circle cx="154" cy="101" r="7" fill="#3b2530"/>
+        <ellipse cx="130" cy="121" rx="25" ry="19" fill="#f3c69d"/><ellipse cx="130" cy="119" rx="8" ry="6" fill="#56343a"/>
+        <path d="M130 125 q-10 14-22 2 M130 125 q10 14 22 2" fill="none" stroke="#56343a" stroke-width="4" stroke-linecap="round"/>
+        <ellipse cx="80" cy="151" rx="23" ry="48" fill="url(#fur)" transform="rotate(24 80 151)"/>
+        <ellipse cx="180" cy="151" rx="23" ry="48" fill="url(#fur)" transform="rotate(-24 180 151)"/>
+        <ellipse cx="93" cy="216" rx="27" ry="17" fill="#d79563"/><ellipse cx="167" cy="216" rx="27" ry="17" fill="#d79563"/>
+        <rect x="88" y="133" width="84" height="68" rx="8" fill="url(#box)"/>
+        <rect x="123" y="133" width="14" height="68" fill="#ffe0ec" opacity=".9"/>
+        <rect x="88" y="153" width="84" height="12" fill="#ffcade" opacity=".9"/>
+        <path d="M130 137 C108 118 92 143 112 150 C124 154 130 145 130 137 C130 145 136 154 148 150 C168 143 152 118 130 137Z" fill="#fff0f6"/>
+        <circle cx="91" cy="89" r="9" fill="#f3b3cf" opacity=".7"/><circle cx="169" cy="89" r="9" fill="#f3b3cf" opacity=".7"/>
+      </svg>
+    </div>
+
+    <div class="tip">🧸 Teddy has brought you a special gift 🎁</div>
+
+    <div class="custom-box">
+      <input id="customMessage" type="text" maxlength="180" placeholder="Write your birthday message 💗">
+    </div>
+
+    <button class="open-btn" onclick="openGift()">OPEN 💝</button>
+  </section>
+
+  <section id="birthday">
+    <h1>🎂 Happy Birthday! 🎂</h1>
+    <div class="gift-big">🎁</div>
+    <div class="chocolates">🍫 🍬 🍫 🍫</div>
+
+    <div class="note">
+      <p>Wishing you a very <span class="highlight">Happy Birthday</span> 🎀</p>
+      <br>
+      <p id="displayMessage"></p>
+      <br>
+      <p>May your day be filled with <b>happiness, smiles, beautiful moments</b> and lots of sweet surprises. ✨</p>
+      <br>
+      <p class="highlight">🎀 Sahiba 🎀</p>
+      <p>You deserve all the beautiful things this special day can bring. 💗</p>
+      <br>
+      <p>🎈 🎁 🍫 🧸 🎂 💕</p>
+    </div>
+    <div class="small">Made with lots of good wishes 💗</div>
+  </section>
+</div>
+
+<script>
+function openGift(){
+  const input=document.getElementById('customMessage');
+  const display=document.getElementById('displayMessage');
+  const message=input.value.trim();
+
+  display.textContent=message || 'You are truly special and deserve the happiest birthday ever! 💗';
+
+  document.getElementById('welcome').style.display='none';
+  document.getElementById('birthday').style.display='block';
+
+  // Audio starts from the user's OPEN click, which browsers allow for local audio playback.
+  const audio=document.getElementById('birthdayAudio');
+  audio.currentTime=0;
+  audio.volume=.7;
+  audio.play().catch(()=>{});
+
+  // Celebration burst
+  for(let i=0;i<14;i++){
+    const balloon=document.createElement('div');
+    balloon.textContent='🎈';
+    balloon.className='balloon';
+    balloon.style.left=Math.random()*100+'%';
+    balloon.style.fontSize=(35+Math.random()*30)+'px';
+    balloon.style.animationDuration=(5+Math.random()*5)+'s';
+    balloon.style.animationDelay=(Math.random()*.8)+'s';
+    document.body.appendChild(balloon);
+    setTimeout(()=>balloon.remove(),11000);
+  }
+
+  for(let i=0;i<12;i++){
+    const heart=document.createElement('div');
+    heart.className='heart';
+    heart.textContent=['💗','💕','💖','💞'][Math.floor(Math.random()*4)];
+    heart.style.left=Math.random()*100+'%';
+    heart.style.animationDuration=(4+Math.random()*4)+'s';
+    heart.style.animationDelay=(Math.random()*1)+'s';
+    document.body.appendChild(heart);
+    setTimeout(()=>heart.remove(),9000);
+  }
+
+  // Little sparkle burst around the card
+  const symbols=['✨','💖','💕','🎀','⭐'];
+  for(let i=0;i<20;i++){
+    const s=document.createElement('div');
+    s.className='spark';
+    s.textContent=symbols[Math.floor(Math.random()*symbols.length)];
+    s.style.left='50%';s.style.top='42%';
+    s.style.setProperty('--x',(Math.random()*360-180)+'px');
+    s.style.setProperty('--y',(Math.random()*300-150)+'px');
+    document.body.appendChild(s);
+    setTimeout(()=>s.remove(),1600);
+  }
+}
+</script>
+</body>
+</html>
